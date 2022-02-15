@@ -12,6 +12,11 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 
+h1 {
+    color: #fff;
+    border-bottom: 1px solid
+}
+
 
 button { 
     font-size: 1rem;

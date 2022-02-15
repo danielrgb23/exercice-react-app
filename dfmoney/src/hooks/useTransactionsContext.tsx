@@ -2,15 +2,14 @@ import { createContext, useEffect, useState, ReactNode, useContext } from "react
 import { api } from "../services/api";
 
 interface Transaction {
-    id: number;
-    title: string;
-    amount: number;
-    type: string;
-    category: string;
-    createdAt: string;
+    id: string;
+    name: string;
+    email: string;
+    tel: string;
+    
 }
 
-type TransactionInput = Omit<Transaction, 'id' | 'createdAt'>;
+type TransactionInput = Transaction;
 
 interface TransactionsProviderProps {
     children: ReactNode;
@@ -36,7 +35,7 @@ const TransactionsContext = createContext<TransactionsContextData>(
     async function createTransaction(transactionInput: TransactionInput ) {  
        const response = await api.post('/transactions', {
            ...transactionInput,
-           createdAt: new Date(),
+           
        })
         const { transaction } = response.data;
 

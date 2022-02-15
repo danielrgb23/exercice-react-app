@@ -12,20 +12,28 @@ createServer({
    server.db.loadData({
     transactions: [
       {
-        id: 1, 
-        title: 'Freelance de website',
-        type: 'deposit',
-        category: 'Dev',
-        amount: 6000,
-        createdAt: new Date('2021-07-19 15:00:00'),
+        id: '001001', 
+        name: 'Jose da Silva',
+        email: 'jose@email.com',
+        tel: ('11 99901-1234'),
       },
       {
-        id: 2, 
-        title: 'Aluguel',
-        type: 'withdraw',
-        category: 'Casa',
-        amount: 1100,
-        createdAt: new Date('2021-08-07 11:00:00'),
+        id: '001002', 
+        name: 'Marcio de Souza',
+        email: 'marcio@email.com',
+        tel: ('11 99902-1234'),
+      },
+      {
+        id: '001003', 
+        name: 'Mauricio Cruz',
+        email: 'mauricio@email.com',
+        tel: ('11 99903-1234'),
+      },
+      {
+        id: '001004', 
+        name: 'Fabiana Dias',
+        email: 'fabiana@email.com',
+        tel: ('11 99904-1234'),
       }
     ],
    })
